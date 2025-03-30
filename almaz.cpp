@@ -1,34 +1,32 @@
 #include <iostream>
-#include <iostream>
 using namespace std;
-int ize = 10; // высота алмаза 
-int col = 2;
-int space = 10/2;
+int ize = 10;
 int main() {
-    for(int c = 0;c < ize /2; c++) //1 половина
+   for (int i = 0; i < ize / 2;i++)
     {
-        for(int r = 0;r<ize /2;r++)
+    for (int j = 0; j < ize / 2;j++)
+    {
+        if (j < ize / 2 - i)
         {
-            if(r<ize /2-c-1)
-            {
-                cout << " ";
-            }
-            else
-                cout << "* ";
+            cout << " ";
         }
-        cout << endl;
+        else
+        {
+            cout << "* ";
+        }
     }
-    for(int c = 0;c < ize/2-1; c++) // 2 половина
+    cout << endl;
+    }
+    for (int i = 0; i < ize / 2;i++)
     {
-        for(int r = 0;r<ize/2;r++)
-        {
-            if(r<ize/2-1+c-ize /2/2-1)
-            {
-                cout << " ";
-            }
-            else
-                cout << "* ";
-        }
+       for (int j = 0; j < ize / 2;j++)
+       {
+           if(j <i)
+               cout << " ";
+           else
+               cout << "* ";
+
+       }
         cout << endl;
     }
     return 0;
